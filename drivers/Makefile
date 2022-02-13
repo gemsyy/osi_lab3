@@ -3,7 +3,7 @@
 # if KERNELRELEASE is not defined, we've been called directly from the command line.
 # Invoke the kernel build system.
 ifeq (${KERNELRELEASE},)
-	KERNEL_SOURCE := /usr/src/linux-headers-5.8.0-43-generic
+	KERNEL_SOURCE := /usr/src/linux-headers-5.13.0-28-generic
 	PWD := $(shell pwd)
 default:
 	${MAKE} -C ${KERNEL_SOURCE} M=${shell pwd} modules
@@ -16,5 +16,5 @@ clean:
 # kernel build system and can use its language.
 else
 	obj-m := nothing.o
-endif
+en
 
